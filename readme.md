@@ -32,3 +32,23 @@ Ensure you have the following tools installed:
 1. Clone this repository:
    ```git clone https://github.com/alobley/assh.git```
    ```cd assh```
+
+2. Build the project:
+   ```make```
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute:
+
+- Fork the repository and submit a pull request.
+- For direct contributions to the main branch, email me at rn5866n8@gmail.com to discuss your proposal.
+
+When contributing, please:
+
+- Follow the existing coding style and conventions.
+- Include meaningful commit messages.
+- Provide explanations or comments for any complex assembly instructions.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file in the root directory for more details.
