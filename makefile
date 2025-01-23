@@ -1,4 +1,9 @@
-all: assemble run
+all: dirs assemble run
+
+dirs:
+	@echo "Creating directories..."
+	mkdir -p bin
+	mkdir -p build
 
 assemble:
 	@echo "Compiling..."
