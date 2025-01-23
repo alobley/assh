@@ -45,11 +45,13 @@ _start:
     cmp rax, 0                              ; If they are equal, go to .clear
     je .clear
 
-    mov rdi, command
-    mov rsi, cd
-    call strcmp                             ; Compare command to "cd"
-    cmp rax, 0                              ; If they are equal, go to .cd
-    je .cd
+    cmp byte [command], 'c'                 ; Check if the first character is 'c'
+    jne .nocd                               ; If not, go to .nocd
+    cmp byte [command + 1], 'd'             ; Check if the second character is 'd'
+    jne .nocd                               ; If not, go to .nocd
+    cmp byte [command + 2], ' '             ; Check if the third character is a space
+    jne .nocd                               ; If not, go to .nocd
+    jmp .cd                                 ; Otherwise, go to .cd
 
 .nocd:
     fork                                    ; Fork a child process
@@ -80,11 +82,11 @@ _start:
     mov rcx, CMD_SIZE
     call memset                             ; Clear the command buffer
 
-    jmp .nocd                               ; Go back to the beginning of the loop
+    jmp _start                              ; Go back to the beginning of the loop
 
 .clear:
     write STDOUT, ansi_clear, aclen         ; Clear the terminal
-    jmp .nocd                               ; Go back to the beginning of the loop
+    jmp _start                              ; Go back to the beginning of the loop
 
 ; RSI: pointer to the first string
 ; RDI: pointer to the second string
