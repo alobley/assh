@@ -45,9 +45,7 @@ _start:
     cmp rax, 0                              ; If they are equal, go to .clear
     je .clear
 
-    cmp byte [command], 'c'                 ; Check if the first character is 'c'
-    jne .nocd                               ; If not, go to .nocd
-    cmp byte [command + 1], 'd'             ; Check if the second character is 'd'
+    cmp word [command], 'cd'                ; Check if the first character is 'c'
     jne .nocd                               ; If not, go to .nocd
     cmp byte [command + 2], ' '             ; Check if the third character is a space
     jne .nocd                               ; If not, go to .nocd
