@@ -31,9 +31,11 @@ Ensure you have the following tools installed:
 **Build Steps:**  
 1. Clone this repository:
 ```git clone https://github.com/alobley/assh.git```
+
+2. Enter the project directory: 
 ```cd assh```
 
-2. Build the project:
+3. Build the project:
 ```make```
 
 ## Contributing
