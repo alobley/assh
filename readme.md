@@ -1,6 +1,6 @@
 # ASSh - A Simple Linux Shell Built in x86-64 Assembly
 
-ASSh (Assembly Shell) is an ultra-lightweight Linux shell written entirely in x86-64 assembly. This project is a personal challenge to create a functional, efficient, and library-free shell tailored instruction-by-instruction. The shell is minimalistic yet powerful, making it an ideal project for assembly enthusiasts and those curious about low-level programming.
+ASSh (Assembly Shell) is an ultra-lightweight Linux shell written entirely in x86-64 assembly. This project is a personal challenge to create a functional, efficient, and library-free shell tailored instruction-by-instruction. The shell is minimalistic but functions as expected.
 
 ## Features
 - Minimal dependencies (pure assembly, no external libraries)
